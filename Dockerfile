@@ -35,7 +35,7 @@ RUN rm -rf /webrtc-checkout
 
 
 COPY webrtcConfig.cmake /webrtc/
-COPY hello.cc CMakeLists.txt /test/
+COPY test /test
 RUN rm -rf /test/build && mkdir -p /test/build && cd /test/build && cmake ../ && make
 
 
