@@ -1,4 +1,5 @@
-set(webrtc_INSTALL_PREFIX /webrtc)
+set(webrtc_INSTALL_PREFIX ${CMAKE_CURRENT_LIST_FILE})
+get_filename_component(webrtc_INSTALL_PREFIX "${webrtc_INSTALL_PREFIX}" PATH)
 set(webrtc_INCLUDE_DIRS "${webrtc_INSTALL_PREFIX}/include;${webrtc_INSTALL_PREFIX}/include/third_party")
 
 set(webrtc_LIBRARIES "pthread")

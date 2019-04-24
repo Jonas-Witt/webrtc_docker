@@ -31,6 +31,8 @@ RUN ninja -C out/Default
 
 RUN find out/Default -type f -name lib*.a -print0 | xargs -0 -L 1 cp -t /webrtc/lib
 RUN rsync -avm --include='*.h' -f 'hide,! */' . /webrtc/include
+RUN rm -rf /webrtc-checkout
+
 
 COPY webrtcConfig.cmake /webrtc/
 COPY hello.cc CMakeLists.txt /test/
