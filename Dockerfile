@@ -35,8 +35,11 @@ RUN rm -rf /webrtc-checkout
 
 
 COPY webrtcConfig.cmake /webrtc/
-COPY test /test
-RUN rm -rf /test/build && mkdir -p /test/build && cd /test/build && cmake ../ && make
+COPY test /catkin_ws/src/test
+WORKDIR /catkin_ws
+RUN . /opt/ros/kinetic/setup.sh && catkin_make
+
+ENV ROS_MASTER_URI http://localhost:11311
 
 
 CMD ["bash"]

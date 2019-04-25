@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>webrtc_ros</name>
+  <version>0.0.1</version>
+  <description>A WebRTC ROS test</description>
+
+  <author email="jonas.witt@live.de">Jonas Witt</author>
+  <maintainer email="jonas.witt@live.de">Jonas Witt</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+
+</package>
